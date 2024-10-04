@@ -20,24 +20,7 @@
             justify-content: center;
             background-color: #ff4d4d; /* Kırmızı Arka Plan */
             color: #fff;
-            position: relative;
-            overflow: hidden;
         }
-
-        /* Kalp Simgeleri */
-        .heart {
-            position: absolute;
-            font-size: 2rem;
-            color: rgba(255, 255, 255, 0.6);
-            animation: heartbeat 1.5s infinite;
-        }
-
-        /* Farklı Pozisyonlar için Kalp */
-        .heart:nth-child(1) { top: 10%; left: 5%; }
-        .heart:nth-child(2) { top: 15%; right: 10%; }
-        .heart:nth-child(3) { bottom: 20%; left: 20%; }
-        .heart:nth-child(4) { bottom: 10%; right: 15%; }
-        .heart:nth-child(5) { top: 60%; left: 30%; }
 
         /* Container */
         .container {
@@ -47,8 +30,9 @@
             background: rgba(255, 255, 255, 0.2); /* Beyaz Yarı Şeffaf Arka Plan */
             max-width: 800px;
             width: 90%;
+            height: 80vh; /* Yükseklik Ayarı */
+            overflow-y: auto; /* Dikey kaydırma çubuğu */
             box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
-            position: relative; /* Süslemeler için */
         }
 
         /* Başlık Stili */
@@ -67,6 +51,13 @@
             color: #fff; /* Beyaz Renk */
             margin: 20px 0;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Kalp Simgesi */
+        .heart {
+            font-size: 4rem;
+            color: #ff6b81; /* Açık Pembe Renk */
+            margin: 20px 0;
         }
 
         /* Button Stili */
@@ -102,7 +93,6 @@
             margin-top: 40px;
             font-size: 1rem;
             color: #fff; /* Beyaz Renk */
-            position: relative;
         }
 
         /* Responsive Tasarım */
@@ -112,7 +102,7 @@
             }
 
             .heart {
-                font-size: 4rem;
+                font-size: 3rem; /* Küçültülmüş Kalp */
             }
 
             iframe {
@@ -128,23 +118,12 @@
                 padding: 12px 25px;
             }
         }
-
-        /* Animasyonlar */
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Hilal, Sen Benim Her Şeyimsin</h1>
-        <div class="heart">❤️</div>
-        <div class="heart">❤️</div>
-        <div class="heart">❤️</div>
-        <div class="heart">❤️</div>
-        <div class="heart">❤️</div>
+        <div class="heart">❤️</div> <!-- Tek Kalp Simgesi -->
         <p>Hilal, seninle her anı paylaşmak, hayatımın en güzel hediyesi. Zamanın durduğu, kalbimin sadece senin için atıyor olduğu anlar, benim için çok değerli...</p>
         <p>Sonsuza kadar yanımda olmanı diliyorum. Seninle her anı paylaşmak, en büyük hayalim!</p>
 
@@ -155,7 +134,7 @@
         <button class="btn" onclick="alert('Seni seviyorum Hilal! 💞')">Tıkla ve Mesajı Gör</button>
 
         <div class="footer">
-            <p>Bu sayfa, sana olan sevgimin bir yansıması... Sonsuz aşkla, levent</p>
+            <p>Bu sayfa, sana olan sevgimin bir yansıması... Sonsuz aşkla, Levent</p>
         </div>
     </div>
 </body>
