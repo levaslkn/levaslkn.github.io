@@ -30,7 +30,7 @@
             background: rgba(255, 255, 255, 0.2); /* Beyaz Yarı Şeffaf Arka Plan */
             max-width: 800px;
             width: 90%;
-            height: 80vh; /* Yükseklik Ayarı */
+            height: auto; /* Yükseklik otomatik */
             overflow-y: auto; /* Dikey kaydırma çubuğu */
             box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
         }
@@ -98,7 +98,7 @@
         /* Responsive Tasarım */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem; /* Daha küçük başlık */
             }
 
             .heart {
@@ -110,12 +110,35 @@
             }
 
             p {
-                font-size: 1rem;
+                font-size: 1rem; /* Daha küçük metin */
             }
 
             .btn {
-                font-size: 1rem;
-                padding: 12px 25px;
+                font-size: 1rem; /* Daha küçük buton yazısı */
+                padding: 10px 20px; /* Daha küçük buton boyutu */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem; /* Daha küçük başlık */
+            }
+
+            .heart {
+                font-size: 2.5rem; /* Daha küçük kalp */
+            }
+
+            iframe {
+                height: 180px; /* Daha küçük çerçeve */
+            }
+
+            p {
+                font-size: 0.9rem; /* Daha küçük metin */
+            }
+
+            .btn {
+                font-size: 0.9rem; /* Daha küçük buton yazısı */
+                padding: 8px 16px; /* Daha küçük buton boyutu */
             }
         }
     </style>
@@ -134,7 +157,7 @@
         <button class="btn" onclick="alert('Seni seviyorum Hilal! 💞')">Tıkla ve Mesajı Gör</button>
 
         <div class="footer">
-            <p>Bu sayfa, sana olan sevgimin bir yansıması... Sonsuz aşkla, Levent</p>
+            <p>Bu sayfa, sana olan sevgimin bir yansıması... Sonsuz aşkla,Levent</p>
         </div>
     </div>
 </body>
