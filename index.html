@@ -3,161 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hilal'e Özel Mesaj</title>
+    <title>Emir, Nenesinin Çılgını!</title>
     <style>
-        /* Genel Stil */
-        * {
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #ffcccb;
+            text-align: center;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-
-        body, html {
-            height: 100%;
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #c62828; /* Kırmızı Arka Plan */
-            color: #fff;
-        }
-
-        /* Container */
         .container {
-            text-align: center;
-            padding: 40px;
+            background-color: #fff;
             border-radius: 20px;
-            background: rgba(255, 255, 255, 0.1); /* Beyaz Yarı Şeffaf Arka Plan */
-            max-width: 800px;
-            width: 90%;
-            height: auto; /* Yükseklik otomatik */
-            overflow-y: auto; /* Dikey kaydırma çubuğu */
-            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 40px;
         }
-
-        /* Başlık Stili */
         h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #ffeb3b; /* Sarı Renk */
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            color: #ff4081;
+            font-size: 40px;
         }
-
-        /* Metin Stili */
         p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #fff; /* Beyaz Renk */
-            margin: 20px 0;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 25px;
         }
-
-        /* Kalp Simgesi */
-        .heart {
-            font-size: 4rem; /* Kalp Boyutu */
-            margin: 20px 0;
-        }
-
-        /* Button Stili */
-        .btn {
-            padding: 15px 30px;
-            font-size: 1.1rem;
-            color: #fff;
-            background-color: #ff6b81; /* Açık Kırmızı Renk */
-            border: none;
-            border-radius: 50px;
+        .button {
+            background-color: #ff4081;
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
             cursor: pointer;
-            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
-            margin-top: 30px;
         }
-
-        .btn:hover {
-            background-color: #ff9a9a; /* Daha Açık Kırmızı */
-            transform: translateY(-2px);
+        .button:hover {
+            background-color: #e91e63;
         }
-
-        /* Video Çerçevesi */
-        iframe {
+        .balloon-img {
             margin-top: 20px;
             width: 100%;
-            max-width: 560px; /* Küçültülmüş Çerçeve */
-            height: 315px; /* Küçültülmüş Çerçeve */
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Footer Mesajı */
-        .footer {
-            margin-top: 40px;
-            font-size: 1rem;
-            color: #fff; /* Beyaz Renk */
-        }
-
-        /* Responsive Tasarım */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.2rem; /* Daha küçük başlık */
-            }
-
-            .heart {
-                font-size: 3rem; /* Küçültülmüş Kalp */
-            }
-
-            iframe {
-                height: 200px; /* Responsive Çerçeve Yüksekliği */
-            }
-
-            p {
-                font-size: 1rem; /* Daha küçük metin */
-            }
-
-            .btn {
-                font-size: 1rem; /* Daha küçük buton yazısı */
-                padding: 10px 20px; /* Daha küçük buton boyutu */
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem; /* Daha küçük başlık */
-            }
-
-            .heart {
-                font-size: 2.5rem; /* Daha küçük kalp */
-            }
-
-            iframe {
-                height: 180px; /* Daha küçük çerçeve */
-            }
-
-            p {
-                font-size: 0.9rem; /* Daha küçük metin */
-            }
-
-            .btn {
-                font-size: 0.9rem; /* Daha küçük buton yazısı */
-                padding: 8px 16px; /* Daha küçük buton boyutu */
-            }
+            max-width: 450px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Hilal, Sen Benim Her Şeyimsin</h1>
-        <div class="heart">❤️</div> <!-- Tek Kalp Simgesi -->
-        <p>Hilal, seninle her anı paylaşmak, hayatımın en güzel hediyesi. Zamanın durduğu, kalbimin sadece senin için atıyor olduğu anlar, benim için çok değerli...</p>
-        <p>Sonsuza kadar yanımda olmanı diliyorum. Seninle her anı paylaşmak, en büyük hayalim!</p>
-
-        <!-- YouTube videosunu gömme -->
-        <iframe src="https://www.youtube.com/embed/V_GM-XeqMcc" 
-        title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        <button class="btn" onclick="alert('Seni seviyorum Hilal! 💞')">Tıkla ve Mesajı Gör</button>
-
-        <div class="footer">
-            <p>Bu sayfa, sana olan sevgimin bir yansıması... Sonsuz aşkla, Levent</p>
-        </div>
+        <h1>Emir, Nenesinin Çılgını!</h1>
+        <p>Ulan Emir! Sende bana hastasın nenesi çılgın, bir yaş daha aldın ha? Artık yaşlanıyorsun ama sen hep aynı çılgınsın. Yeni yaşında umarım belini sakatlamazsın, yoksa seni kapıda unuturuz. Hadi nice senelere lan pis herif, yine doğdun işte!</p>
+        <button class="button" onclick="alert('Pastayı mı patlattın lan?! Hadi afiyet olsun nenesinin çılgını!')">Pastayı Patlat Lan!</button>
+        <img class="balloon-img" src="https://galeri14.uludagsozluk.com/811/t-i-b-b_1700174.jpg" alt="Eğlenceli Doğum Günü Balonları">
     </div>
 </body>
 </html>
